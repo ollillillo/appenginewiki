@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/css/main.css" />
+
+  <title>Simple Wiki</title>
+</head>
+<body>
+  <h1><a href="/" class="main-title">Simple Wiki</a>
+  {% block pathuser %}
+  {% endblock %}
+  </h1>
+  <div id="content">
+  {% block nav %}
+  {% endblock %}
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
+

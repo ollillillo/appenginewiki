@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block nav %}
+<ul id="nav">
+<li><a href="/signup">signup</a></li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+    <h2>Login</h2>
+    <form method="post">
+      <input type="hidden" name="next_url" value="{{next_url}}"}/>
+      <table>
+        <tr>
+          <td class="label">Username</td><td><input type="text" name="username" value="{{username}}"></td>
+        </tr>
+
+        <tr>
+          <td class="label">Password</td><td><input type="password" name="password" value=""/></td>
+        </tr>
+
+
+        <tr>
+          <td class="error" colspan="2">{{error}}</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="submit"/>
+          </td>
+        </tr>
+        
+        
+      </table>
+
+      
+    </form>
+{% endblock %}
+    

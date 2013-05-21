@@ -1,0 +1,172 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    min-width: 400px;
+    margin: 0;
+    padding: 0px;
+    color: #333;
+    background: #EEEEEE;
+}
+
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 500px;
+    font-size: 20px;
+    padding: 2px;
+    font-family: monospace;
+}
+
+
+.box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100vw;
+  height: 80vh;
+
+}
+
+textarea{
+    display: block;
+}
+
+input[type=submit] {
+  font-size: 24px;
+}
+
+h1 {
+    display: block;
+    margin: auto;
+    background: #DEFDFE;
+    border: double #555555;
+    margin:1px;
+}
+
+h1 a {
+    text-decoration:none;
+    color: #555555;   
+}
+
+h1 a:hover {
+    color: #94B1B2;   
+}
+
+
+#nav {
+margin:0;
+padding: 0px 0 0px 0;
+background:#555555 0 0 repeat-x;
+
+width:100%;
+height: 34px;
+border:double;
+border-width: 0px;
+}
+
+
+#nav li {
+display:inline;
+float:right;
+
+
+}
+
+
+#nav a:link,
+#nav a:visited {
+color: #333333;
+background:#DEFDFE;
+padding:9px;
+height: 9px;
+
+float:left;
+width: 60px;
+border:double;
+text-decoration:none;
+font:bold 1em/1em Arial, Helvetica, sans-serif;
+text-transform:uppercase;
+
+}
+
+
+
+
+
+
+#nav a:hover,
+#nav a:focus {
+color:#fff;
+background:#002F31;
+}
+
+.pathuser {
+    float: right;
+    font-size: 12px;
+    margin: 0;
+    border: none;
+    height: 20px;  
+}
+
+.pathuser td {
+    border: groove;
+    min-width: 40px;
+    background: #FFFFFF;
+}
+
+#table-6 {
+width: 100%;
+border: 10px solid #666666;
+
+}
+
+#table-6 tbody {
+/* Kind of irrelevant unless your .css is alreadt doing something else */
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+#table-6 thead {
+text-align: left;
+}
+#table-6 thead th {
+background: -moz-linear-gradient(top, #F0F0F0 0, #DBDBDB 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F0F0F0), color-stop(100%, #DBDBDB));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0', endColorstr='#DBDBDB', GradientType=0);
+border: 1px solid #B0B0B0;
+color: #444;
+font-size: 16px;
+font-weight: bold;
+padding: 3px 10px;
+}
+#table-6 td {
+padding: 3px 10px;
+
+}
+
+
+#histcontent {
+    max-width: 600px;
+}
+
+#table-6 tr:nth-child(even) {
+background: #DDDDDD;
+}
+

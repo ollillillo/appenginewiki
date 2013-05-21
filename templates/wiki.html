@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block pathuser %}
+<table class="pathuser">
+    <tr>
+        <td>{{path}}</td>
+        <td>{{user.name}}</td>
+    </tr>
+</table>
+{% endblock %}
+
+
+{% block nav %}
+{% if user %}
+<ul id="nav">
+<li><a href="/_edit{{path}}">edit</a></li>
+<li><a href="/_history{{path}}">history</a></li>
+<li><a href="/logout">logout</a></li>
+</ul>
+{% else %}
+
+<ul id="nav">
+    <div id="navitems">
+    <li><a href="/_history{{path}}">history</a></li>
+    <li><a href="/signup">signup</a></li>
+    <li><a href="/login">login</a></li>
+    
+    </div>
+</ul>
+
+
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<pre>
+{{page.content}}
+</pre>
+{% endblock %}

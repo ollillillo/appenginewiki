@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block pathuser %}
+<table class="pathuser">
+    <tr>
+        <td>{{path}}</td>
+        <td>{{user.name}}</td>
+    </tr>
+</table>
+{% endblock %}
+
+{% block nav %}
+  
+
+<ul id="nav">
+{% if user %}
+<li><a href="/logout">logout</a></li>
+{% else %}
+<li><a href="/login">login</a></li>
+{% endif %}
+<li><a href="{{path}}">Latest</a></li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+   
+  <table id="table-6">
+    <caption>Previous Versions of the Page at {{path}}</caption>
+    <thead>
+      <th>Created</th>
+      <th>Author</th>
+      <th>Content</th>
+      {% if user %}
+      <th>Edit</th>
+      {% endif %}
+   </thead>
+      <tbody>
+  {% for p in pages %}
+     
+    <tr>
+  
+   
+    <td><a href={{path}}?v={{p.key().id()}}>{{ p.created.strftime("%Y-%m-%d %H:%M")}}</a></td>
+    <td>{{p.author.name}}</td>
+    <td id="histcontent">{{ p.content | truncate() }} </td>
+    
+    {% if user %}
+    <td id="histedit"><a href="/_edit{{path}}?v={{p.key().id()}}">edit</a></td>
+    {% endif %}
+    
+    </tr>
+   
+  {% endfor %}
+   </tbody>
+  </table>
+
+{% endblock %}

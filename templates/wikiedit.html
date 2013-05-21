@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block pathuser %}
+<table class="pathuser">
+    <tr>
+        <td>{{path}}</td>
+        <td>{{user.name}}</td>
+    </tr>
+</table>
+{% endblock %}
+
+
+{% block content %}
+
+<ul id="nav">
+    <li>
+        <a href="{{path}}">cancel</a>
+    </li>
+    <li>
+    <a href="/logout">logout</a>
+    </li>
+    
+    
+</ul>
+
+
+    
+    <form  method="post">
+    <input type="submit" value="submit"/><br>
+    <textarea class="box" name="content">{{ page.content}}</textarea> 
+    
+    </form>
+
+    
+    
+{% endblock %}
